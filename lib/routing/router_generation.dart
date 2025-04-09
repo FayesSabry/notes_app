@@ -9,7 +9,7 @@ class RouterGeneration {
       GoRoute(
         path: AppRoutes.notesView,
         name: AppRoutes.notesView,
-        builder: (context, state) => NotesView(),
+        builder: (context, state) =>const NotesView(),
       ),
     ],
   );
