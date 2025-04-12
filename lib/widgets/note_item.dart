@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NonteItem extends StatelessWidget {
@@ -18,45 +19,50 @@ class NonteItem extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 20.0.h),
       child: Stack(
         children: [
-          Container(
-            padding: EdgeInsets.only(
-              top: 24.h,
-              bottom: 24.h,
-              left: 16.w,
-              right: 16.w,
-            ),
-            decoration: BoxDecoration(
-              color: const Color(0xffffcc80),
-              borderRadius: BorderRadius.circular(16.r),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                ListTile(
-                  title: Text(
-                    title,
+          InkWell(
+            onTap: () {
+              context.pushNamed('/editView');
+            },
+            child: Container(
+              padding: EdgeInsets.only(
+                top: 24.h,
+                bottom: 24.h,
+                left: 16.w,
+                right: 16.w,
+              ),
+              decoration: BoxDecoration(
+                color: const Color(0xffffcc80),
+                borderRadius: BorderRadius.circular(16.r),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  ListTile(
+                    title: Text(
+                      title,
+                      style: GoogleFonts.poppins(
+                        fontSize: 26.sp,
+                        color: Colors.black,
+                      ),
+                    ),
+                    subtitle: Text(
+                      subtitle,
+                      style: GoogleFonts.poppins(
+                        fontSize: 20.sp,
+                        color: Colors.black.withValues(alpha: 0.5),
+                      ),
+                    ),
+                  ),
+
+                  Text(
+                    date,
                     style: GoogleFonts.poppins(
-                      fontSize: 26.sp,
+                      fontSize: 12.sp,
                       color: Colors.black,
                     ),
                   ),
-                  subtitle: Text(
-                    subtitle,
-                    style: GoogleFonts.poppins(
-                      fontSize: 20.sp,
-                      color: Colors.black.withValues(alpha: 0.5),
-                    ),
-                  ),
-                ),
-
-                Text(
-                  date,
-                  style: GoogleFonts.poppins(
-                    fontSize: 12.sp,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Positioned(
