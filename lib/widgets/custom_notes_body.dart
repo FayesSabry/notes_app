@@ -16,7 +16,7 @@ class CustomNotesBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomAppBar(),
-          SizedBox(height: 50.h),
+          SizedBox(height: 20.h),
           const NotesListView(),
         ],
       ),

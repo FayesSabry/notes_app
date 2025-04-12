@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/note_item.dart';
 
@@ -9,6 +8,7 @@ class NotesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
+        padding: EdgeInsets.zero,
         itemBuilder:
             (context, index) => const NonteItem(
               title: 'First Note',
