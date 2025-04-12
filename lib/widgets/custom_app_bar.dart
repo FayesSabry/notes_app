@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
           text,
           style: TextStyle(fontSize: 43.sp, fontWeight: FontWeight.w500),
         ),
-        CustomSearchIcon(icon: Icon(icon)),
+        CustomIcon(icon: Icon(icon)),
       ],
     );
   }
