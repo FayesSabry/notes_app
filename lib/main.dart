@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/routing/router_generation.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox(kNoteBox);
   runApp(const NotesApp());
 }
 
